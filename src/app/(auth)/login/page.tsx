@@ -10,6 +10,8 @@ function LoginContent() {
   const searchParams = useSearchParams();
   const error = searchParams.get('error');
 
+  const detail = searchParams.get('detail');
+
   const errorMessages: Record<string, string> = {
     unauthorized_domain: 'Your email domain is not authorized to access this application.',
     not_registered: 'Your account is not registered in the system. Please contact an administrator.',
@@ -44,6 +46,9 @@ function LoginContent() {
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md text-sm">
               {errorMessages[error] || 'An unknown error occurred.'}
+              {detail && (
+                <p className="mt-1 text-xs text-red-500">Detail: {detail}</p>
+              )}
             </div>
           )}
           <Button

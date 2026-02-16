@@ -42,7 +42,14 @@ export async function GET(request: Request) {
 
     const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
-    if (!error && data.user?.email) {
+    if (error) {
+      console.error('Auth code exchange error:', error.message);
+      return NextResponse.redirect(
+        `${origin}/login?error=auth_error&detail=${encodeURIComponent(error.message)}`
+      );
+    }
+
+    if (data.user?.email) {
       // Check if email domain is allowed
       const domain = data.user.email.split('@')[1]?.toLowerCase();
       if (!ALLOWED_DOMAINS.includes(domain)) {

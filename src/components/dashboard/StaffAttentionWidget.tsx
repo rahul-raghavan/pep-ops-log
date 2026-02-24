@@ -152,7 +152,7 @@ export function StaffAttentionWidget({ selectedCenterId }: StaffAttentionWidgetP
                 <Link
                   key={staff.id}
                   href={`/subjects/${staff.id}`}
-                  className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="flex items-center justify-between py-2 px-3 bg-[#F0EFED] rounded-lg hover:bg-[#F0EFED]/80 transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium text-gray-900">{staff.name}</span>

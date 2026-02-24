@@ -36,8 +36,8 @@ export function Sidebar({ user }: SidebarProps) {
   ];
 
   return (
-    <div className="flex flex-col w-64 bg-gray-900 text-white min-h-screen">
-      <div className="p-4 border-b border-gray-800">
+    <div className="flex flex-col w-64 bg-[#2C3E50] text-white min-h-screen">
+      <div className="p-4 border-b border-[#3D5166]">
         <h1 className="text-xl font-bold">PEP Ops Logger</h1>
       </div>
 
@@ -51,8 +51,8 @@ export function Sidebar({ user }: SidebarProps) {
               className={cn(
                 'flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors',
                 isActive
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                  ? 'bg-[#5BB8D6]/20 text-[#5BB8D6]'
+                  : 'text-gray-300 hover:bg-white/10 hover:text-white'
               )}
             >
               <item.icon className="w-5 h-5" />
@@ -77,8 +77,8 @@ export function Sidebar({ user }: SidebarProps) {
                   className={cn(
                     'flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     isActive
-                      ? 'bg-gray-800 text-white'
-                      : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                      ? 'bg-[#5BB8D6]/20 text-[#5BB8D6]'
+                      : 'text-gray-300 hover:bg-white/10 hover:text-white'
                   )}
                 >
                   <item.icon className="w-5 h-5" />

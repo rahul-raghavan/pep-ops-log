@@ -139,26 +139,26 @@ export default function ObservationsPage() {
   }, [selectedCenterId, typeFilter, searchTerm, loggedByFilter]);
 
   const typeColors: Record<string, string> = {
-    punctuality: 'bg-green-100 text-green-700',
-    safety: 'bg-red-100 text-red-700',
-    hygiene: 'bg-teal-100 text-teal-700',
-    communication: 'bg-blue-100 text-blue-700',
-    procedure: 'bg-purple-100 text-purple-700',
-    parent_feedback: 'bg-amber-100 text-amber-700',
-    other: 'bg-gray-100 text-gray-700',
+    punctuality: 'bg-[#7BC67E]/15 text-[#4A8B4D]',
+    safety: 'bg-[#D4705A]/15 text-[#B5533E]',
+    hygiene: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    communication: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    procedure: 'bg-[#A78BDB]/15 text-[#7B5FB5]',
+    parent_feedback: 'bg-[#F5C06B]/15 text-[#B8883A]',
+    other: 'bg-[#F0EFED] text-[#777777]',
   };
 
   const roleColors: Record<string, string> = {
-    nanny: 'bg-purple-100 text-purple-700',
-    driver: 'bg-blue-100 text-blue-700',
-    manager_as_subject: 'bg-amber-100 text-amber-700',
+    nanny: 'bg-[#A78BDB]/15 text-[#7B5FB5]',
+    driver: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    manager_as_subject: 'bg-[#F5C06B]/15 text-[#B8883A]',
   };
 
   return (
     <div className="space-y-4 lg:space-y-6">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Observations</h1>
+          <h1 className="text-xl lg:text-2xl font-bold text-[#5BB8D6] uppercase tracking-wider">Observations</h1>
           <p className="text-gray-500 text-sm mt-1 hidden sm:block">
             View and search all logged observations
           </p>
@@ -236,12 +236,12 @@ export default function ObservationsPage() {
                     setTypeFilter('all');
                     setLoggedByFilter('all');
                   }}
-                  className="text-blue-600 hover:underline"
+                  className="text-[#D4705A] hover:underline"
                 >
                   Clear filters
                 </button>
               ) : (
-                <Link href="/observations/new" className="text-blue-600 hover:underline">
+                <Link href="/observations/new" className="text-[#D4705A] hover:underline">
                   Log your first observation
                 </Link>
               )}
@@ -257,7 +257,7 @@ export default function ObservationsPage() {
                   <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
                     <Link
                       href={`/subjects/${obs.subject_id}`}
-                      className="font-medium text-gray-900 hover:text-blue-600"
+                      className="font-medium text-gray-900 hover:text-[#D4705A]"
                     >
                       {obs.subject?.name}
                     </Link>

@@ -68,7 +68,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-[#F0EFED]">
         <div className="animate-pulse text-gray-500">Loading...</div>
       </div>
     );
@@ -76,14 +76,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-[#F0EFED]">
         <div className="text-gray-500">Not authenticated</div>
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[#F0EFED]">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block">
         <Sidebar user={user} />

@@ -285,7 +285,7 @@ export default function ManagersPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Managers</h1>
+          <h1 className="text-2xl font-bold text-[#5BB8D6] uppercase tracking-wider">Managers</h1>
           <p className="text-gray-500 text-sm mt-1">
             Manage user accounts and center assignments
           </p>
@@ -363,8 +363,8 @@ export default function ManagersPage() {
                           onClick={() => toggleCenter(center.id)}
                           className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                             formData.center_ids.includes(center.id)
-                              ? 'bg-blue-100 text-blue-700 border-2 border-blue-300'
-                              : 'bg-gray-100 text-gray-600 border-2 border-transparent'
+                              ? 'bg-[#5BB8D6]/15 text-[#3A8DB5] border-2 border-[#5BB8D6]/40'
+                              : 'bg-[#F0EFED] text-[#777777] border-2 border-transparent'
                           }`}
                         >
                           {center.name}
@@ -454,8 +454,8 @@ export default function ManagersPage() {
                       variant="secondary"
                       className={
                         manager.role === 'super_admin'
-                          ? 'bg-purple-100 text-purple-700'
-                          : 'bg-blue-100 text-blue-700'
+                          ? 'bg-[#A78BDB]/15 text-[#7B5FB5]'
+                          : 'bg-[#5BB8D6]/15 text-[#3A8DB5]'
                       }
                     >
                       {manager.role.replace('_', ' ')}

@@ -119,7 +119,7 @@ export function AISummary({ subjectId, subjectName, firstObservationDate, onSumm
               <button
                 type="button"
                 onClick={() => setShowDateFilter(!showDateFilter)}
-                className="flex items-center gap-2 text-sm text-blue-600 hover:underline"
+                className="flex items-center gap-2 text-sm text-[#D4705A] hover:underline"
               >
                 <Calendar className="w-4 h-4" />
                 {showDateFilter ? 'Hide date filter' : 'Filter by start date'}

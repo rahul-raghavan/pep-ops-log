@@ -127,7 +127,7 @@ export default function DashboardPage() {
       <InactivityBanner userId={user.id} />
 
       <div className="flex items-center justify-between gap-4">
-        <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="text-xl lg:text-2xl font-bold text-[#5BB8D6] uppercase tracking-wider">Dashboard</h1>
         <Link href="/observations/new">
           <Button size="lg" className="shadow-lg">
             <Plus className="w-5 h-5 mr-2" />
@@ -190,7 +190,7 @@ export default function DashboardPage() {
           {recentObservations.length === 0 ? (
             <p className="text-gray-500 text-center py-8">
               No observations logged yet.{' '}
-              <Link href="/observations/new" className="text-blue-600 hover:underline">
+              <Link href="/observations/new" className="text-[#D4705A] hover:underline">
                 Log your first observation
               </Link>
             </p>
@@ -200,7 +200,7 @@ export default function DashboardPage() {
                 <Link
                   key={obs.id}
                   href={`/subjects/${obs.subject_id}`}
-                  className="block p-3 sm:p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="block p-3 sm:p-4 bg-[#F0EFED] rounded-lg hover:bg-[#F0EFED]/80 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex-1 min-w-0">
@@ -212,7 +212,7 @@ export default function DashboardPage() {
                           {obs.subject?.role}
                         </span>
                         {obs.observation_type && (
-                          <span className="text-xs px-2 py-0.5 bg-blue-100 rounded-full text-blue-700">
+                          <span className="text-xs px-2 py-0.5 bg-[#5BB8D6]/15 rounded-full text-[#3A8DB5]">
                             {obs.observation_type.replace('_', ' ')}
                           </span>
                         )}

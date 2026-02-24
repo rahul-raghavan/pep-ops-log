@@ -108,9 +108,9 @@ export default function AnalyticsPage() {
   }, [selectedCenterId, centers]);
 
   const roleColors: Record<string, string> = {
-    nanny: 'bg-purple-100 text-purple-700',
-    driver: 'bg-blue-100 text-blue-700',
-    manager_as_subject: 'bg-amber-100 text-amber-700',
+    nanny: 'bg-[#A78BDB]/15 text-[#7B5FB5]',
+    driver: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    manager_as_subject: 'bg-[#F5C06B]/15 text-[#B8883A]',
   };
 
   if (isLoading) {
@@ -129,7 +129,7 @@ export default function AnalyticsPage() {
   return (
     <div className="space-y-4 lg:space-y-6">
       <div>
-        <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Analytics</h1>
+        <h1 className="text-xl lg:text-2xl font-bold text-[#5BB8D6] uppercase tracking-wider">Analytics</h1>
         <p className="text-gray-500 text-sm mt-1 hidden sm:block">
           Observation metrics and insights
         </p>
@@ -151,29 +151,29 @@ export default function AnalyticsPage() {
               </CardHeader>
               <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-2 gap-2 sm:gap-4">
-                  <div className="bg-blue-50 rounded-lg p-3 sm:p-4">
+                  <div className="bg-[#5BB8D6]/10 rounded-lg p-3 sm:p-4">
                     <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
-                      <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
-                      <span className="text-xs sm:text-sm font-medium text-blue-600">
+                      <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#3A8DB5]" />
+                      <span className="text-xs sm:text-sm font-medium text-[#3A8DB5]">
                         This Week
                       </span>
                     </div>
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-700">
+                    <div className="text-2xl sm:text-3xl font-bold text-[#3A8DB5]">
                       {centerStats.observations_this_week}
                     </div>
-                    <div className="text-xs sm:text-sm text-blue-600">observations</div>
+                    <div className="text-xs sm:text-sm text-[#3A8DB5]">observations</div>
                   </div>
-                  <div className="bg-green-50 rounded-lg p-3 sm:p-4">
+                  <div className="bg-[#7BC67E]/10 rounded-lg p-3 sm:p-4">
                     <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
-                      <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600" />
-                      <span className="text-xs sm:text-sm font-medium text-green-600">
+                      <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4A8B4D]" />
+                      <span className="text-xs sm:text-sm font-medium text-[#4A8B4D]">
                         30 Days
                       </span>
                     </div>
-                    <div className="text-2xl sm:text-3xl font-bold text-green-700">
+                    <div className="text-2xl sm:text-3xl font-bold text-[#4A8B4D]">
                       {centerStats.observations_this_month}
                     </div>
-                    <div className="text-xs sm:text-sm text-green-600">observations</div>
+                    <div className="text-xs sm:text-sm text-[#4A8B4D]">observations</div>
                   </div>
                 </div>
 
@@ -193,7 +193,7 @@ export default function AnalyticsPage() {
                       {centerStats.top_subjects.map((item, index) => (
                         <div
                           key={item.subject.id}
-                          className="flex items-center justify-between py-2 px-2 sm:px-3 bg-gray-50 rounded-lg"
+                          className="flex items-center justify-between py-2 px-2 sm:px-3 bg-[#F0EFED] rounded-lg"
                         >
                           <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                             <span className="text-xs sm:text-sm font-medium text-gray-400 w-4 sm:w-5 flex-shrink-0">
@@ -201,7 +201,7 @@ export default function AnalyticsPage() {
                             </span>
                             <Link
                               href={`/subjects/${item.subject.id}`}
-                              className="text-xs sm:text-sm font-medium text-gray-900 hover:text-blue-600 truncate"
+                              className="text-xs sm:text-sm font-medium text-gray-900 hover:text-[#D4705A] truncate"
                             >
                               {item.subject.name}
                             </Link>

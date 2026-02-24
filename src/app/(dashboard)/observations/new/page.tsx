@@ -155,7 +155,7 @@ function NewObservationContent() {
             <span className="hidden sm:inline">Back</span>
           </Button>
         </Link>
-        <h1 className="text-lg font-semibold text-gray-900">Log Observation</h1>
+        <h1 className="text-lg font-semibold text-[#5BB8D6] uppercase tracking-wider">Log Observation</h1>
       </div>
 
       <Card>

@@ -39,21 +39,21 @@ export function ObservationTrends({ observations }: ObservationTrendsProps) {
   });
 
   const typeColors: Record<string, string> = {
-    punctuality: 'bg-green-100 text-green-700',
-    safety: 'bg-red-100 text-red-700',
-    hygiene: 'bg-teal-100 text-teal-700',
-    communication: 'bg-blue-100 text-blue-700',
-    procedure: 'bg-purple-100 text-purple-700',
-    parent_feedback: 'bg-amber-100 text-amber-700',
-    other: 'bg-gray-100 text-gray-700',
-    untagged: 'bg-gray-100 text-gray-500',
+    punctuality: 'bg-[#7BC67E]/15 text-[#4A8B4D]',
+    safety: 'bg-[#D4705A]/15 text-[#B5533E]',
+    hygiene: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    communication: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    procedure: 'bg-[#A78BDB]/15 text-[#7B5FB5]',
+    parent_feedback: 'bg-[#F5C06B]/15 text-[#B8883A]',
+    other: 'bg-[#F0EFED] text-[#777777]',
+    untagged: 'bg-[#F0EFED] text-[#999999]',
   };
 
   return (
     <Card>
       <CardHeader className="p-4 sm:p-6">
         <CardTitle className="text-base sm:text-lg flex items-center gap-2">
-          <TrendingUp className="w-5 h-5 text-blue-500" />
+          <TrendingUp className="w-5 h-5 text-[#5BB8D6]" />
           Observation Trends
         </CardTitle>
       </CardHeader>

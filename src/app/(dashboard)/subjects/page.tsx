@@ -156,9 +156,9 @@ export default function SubjectsPage() {
   }
 
   const roleColors: Record<SubjectRole, string> = {
-    nanny: 'bg-purple-100 text-purple-700',
-    driver: 'bg-blue-100 text-blue-700',
-    manager_as_subject: 'bg-amber-100 text-amber-700',
+    nanny: 'bg-[#A78BDB]/15 text-[#7B5FB5]',
+    driver: 'bg-[#5BB8D6]/15 text-[#3A8DB5]',
+    manager_as_subject: 'bg-[#F5C06B]/15 text-[#B8883A]',
   };
 
   if (isLoading) {
@@ -178,7 +178,7 @@ export default function SubjectsPage() {
     <div className="space-y-4 lg:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Staff</h1>
+          <h1 className="text-xl lg:text-2xl font-bold text-[#5BB8D6] uppercase tracking-wider">Staff</h1>
           <p className="text-gray-500 text-sm mt-1 hidden sm:block">
             Manage nannies, drivers, and other staff
           </p>
@@ -291,7 +291,7 @@ export default function SubjectsPage() {
               No staff found.{' '}
               <button
                 onClick={openNewDialog}
-                className="text-blue-600 hover:underline"
+                className="text-[#D4705A] hover:underline"
               >
                 Add your first staff member
               </button>
@@ -306,7 +306,7 @@ export default function SubjectsPage() {
               href={`/subjects/${subject.id}`}
               className={`block ${!subject.is_active ? 'opacity-60' : ''}`}
             >
-              <Card className="hover:bg-gray-50 transition-colors">
+              <Card className="hover:bg-[#F0EFED] transition-colors">
                 <CardContent className="p-3 sm:p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex-1 min-w-0">

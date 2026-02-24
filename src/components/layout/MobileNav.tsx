@@ -52,14 +52,14 @@ export function MobileNav({ user, onClose, isOpen }: MobileNavProps) {
       />
 
       {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-72 bg-gray-900 text-white z-50 lg:hidden overflow-y-auto">
-        <div className="p-4 border-b border-gray-800 flex items-center justify-between">
+      <div className="fixed inset-y-0 left-0 w-72 bg-[#2C3E50] text-white z-50 lg:hidden overflow-y-auto">
+        <div className="p-4 border-b border-[#3D5166] flex items-center justify-between">
           <h1 className="text-xl font-bold">PEP Ops Logger</h1>
           <Button
             variant="ghost"
             size="sm"
             onClick={onClose}
-            className="text-white hover:bg-gray-800"
+            className="text-white hover:bg-white/10"
           >
             <X className="w-5 h-5" />
           </Button>
@@ -76,8 +76,8 @@ export function MobileNav({ user, onClose, isOpen }: MobileNavProps) {
                 className={cn(
                   'flex items-center gap-3 px-3 py-3 rounded-md text-base font-medium transition-colors',
                   isActive
-                    ? 'bg-gray-800 text-white'
-                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                    ? 'bg-[#5BB8D6]/20 text-[#5BB8D6]'
+                    : 'text-gray-300 hover:bg-white/10 hover:text-white'
                 )}
               >
                 <item.icon className="w-5 h-5" />
@@ -103,8 +103,8 @@ export function MobileNav({ user, onClose, isOpen }: MobileNavProps) {
                     className={cn(
                       'flex items-center gap-3 px-3 py-3 rounded-md text-base font-medium transition-colors',
                       isActive
-                        ? 'bg-gray-800 text-white'
-                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        ? 'bg-[#5BB8D6]/20 text-[#5BB8D6]'
+                        : 'text-gray-300 hover:bg-white/10 hover:text-white'
                     )}
                   >
                     <item.icon className="w-5 h-5" />
